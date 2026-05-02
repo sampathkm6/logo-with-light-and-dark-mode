@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Media Mister Service Page Og Image Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Media Mister Service Page Og Image Generator</h1>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Service Pages</a>
+      <a href="tools.html">Tools</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="blog-categories.html">Blog Categories</a>
+      <a href="../admin/social_colors.php" target="_blank">Admin</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <div class="controls-panel">
+      <!-- TEMPLATE SELECTION -->
+      <div class="control-group">
+        <label>Template Region:</label>
+        <div class="radio-choices">
+          <label><input type="radio" name="templateRegion" value="EN" checked> EN</label>
+          <label><input type="radio" name="templateRegion" value="IT"> IT</label>
+          <label><input type="radio" name="templateRegion" value="FR"> FR</label>
+          <label><input type="radio" name="templateRegion" value="DE"> DE</label>
+          <label><input type="radio" name="templateRegion" value="ES"> ES</label>
+          <label><input type="radio" name="templateRegion" value="PT-BR"> PT-BR</label>
+          <label><input type="radio" name="templateRegion" value="AR"> AR</label>
+        </div>
+      </div>
+
+      <!-- TEXT INPUT -->
+      <div class="control-group">
+        <label for="textInput">Main text:</label>
+        <input id="textInput" type="text" placeholder="BUY ANDROID APP INSTALLS" />
+      </div>
+
+
+
+
+
+
+
+
+      <!-- SOCIAL MEDIA SEARCH -->
+      <div class="control-group" id="socialSearchWrapper">
+        <label for="socialSearch">Social media:</label>
+        <input id="socialSearch" type="text" placeholder="Type 'f' for Facebook" autocomplete="off" />
+        <ul id="socialResults" class="dropdown"></ul>
+      </div>
+
+      <!-- FILENAME INPUT -->
+      <div class="control-group">
+        <label for="filenameInput">Image Name (optional):</label>
+        <input id="filenameInput" type="text" placeholder="Enter image name..." />
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="control-group">
+        <button id="downloadBtn">Download</button>
+      </div>
+    </div>
+    <!-- CANVAS -->
+    <canvas id="canvas" width="800" height="450"></canvas>
+  </div>
+
+  <p id="status"></p>
+
+  <script src="shared.js"></script>
+  <script src="script.js?v=7"></script>
+</body>
+
+</html>
