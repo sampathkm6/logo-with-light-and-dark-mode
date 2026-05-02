@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Blog Categories OG Image Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Page specific overrides */
+        body {
+            background-color: #f4f6f8;
+        }
+
+        header {
+            background: #fff;
+
+        }
+
+        header a {
+            color: #bdc3c7;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Blog Categories OG Image Generator</h1>
+        <nav class="main-nav">
+            <a href="index.html">Service Pages</a>
+            <a href="tools.html">Tools</a>
+            <a href="glossary.html">Glossary</a>
+            <a href="blog-categories.html" class="active">Blog Categories</a>
+            <a href="../admin/social_colors.php" target="_blank">Admin</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="controls-panel">
+            <!-- TEXT INPUT -->
+            <div class="control-group">
+                <label for="textInput">Category Name:</label>
+                <input id="textInput" type="text" placeholder="Enter Category Name" />
+            </div>
+
+            <!-- SOCIAL MEDIA SEARCH -->
+            <div class="control-group" id="socialSearchWrapper">
+                <label for="socialSearch">Social media (Icon/Brand):</label>
+                <input id="socialSearch" type="text" placeholder="Search brand..." autocomplete="off" />
+                <ul id="socialResults" class="dropdown"></ul>
+            </div>
+
+            <!-- FILENAME INPUT -->
+            <div class="control-group">
+                <label for="filenameInput">Image Name (optional):</label>
+                <input id="filenameInput" type="text" placeholder="Enter image name..." />
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="control-group">
+                <button id="downloadBtn">Download</button>
+            </div>
+        </div>
+
+        <!-- CANVAS -->
+        <canvas id="canvas" width="800" height="450"></canvas>
+    </div>
+
+    <p id="status"></p>
+
+    <script src="shared.js"></script>
+    <script src="blog-categories.js"></script>
+</body>
+
+</html>

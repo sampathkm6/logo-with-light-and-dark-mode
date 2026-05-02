@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tools OG Image Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Dark Theme for Tools */
+        body {
+
+            color: #eee;
+        }
+
+        header {
+            background-color: #fff;
+
+        }
+
+        .controls-panel {
+
+            color: white;
+        }
+
+        input {
+            background: #222;
+            color: white;
+            border: 1px solid #555;
+        }
+
+        .dropdown {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+        }
+
+        .dropdown li {
+            color: #475569;
+        }
+
+        .dropdown li:hover {
+            background: #eff6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tools OG Image Generator</h1>
+        <nav class="main-nav">
+            <a href="index.html">Service Pages</a>
+            <a href="tools.html" class="active">Tools</a>
+            <a href="glossary.html">Glossary</a>
+            <a href="blog-categories.html">Blog Categories</a>
+            <a href="../admin/social_colors.php" target="_blank">Admin</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="controls-panel">
+            <!-- TEXT INPUT -->
+            <div class="control-group">
+                <label for="textInput">Tool Name:</label>
+                <input id="textInput" type="text" placeholder="YouTube Video Downloader" />
+            </div>
+
+            <!-- SUB TEXT INPUT -->
+            <div class="control-group">
+                <label for="subTextInput">Description/Tagline:</label>
+                <input id="subTextInput" type="text" placeholder="Free Online Tool" />
+            </div>
+
+            <!-- SOCIAL MEDIA SEARCH -->
+            <div class="control-group" id="socialSearchWrapper">
+                <label for="socialSearch">Platform/Brand:</label>
+                <input id="socialSearch" type="text" placeholder="Search brand..." autocomplete="off" />
+                <ul id="socialResults" class="dropdown"></ul>
+            </div>
+
+            <!-- FILENAME INPUT -->
+            <div class="control-group">
+                <label for="filenameInput">Image Name (optional):</label>
+                <input id="filenameInput" type="text" placeholder="Enter image name..." />
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="control-group">
+                <button id="downloadBtn">Download</button>
+            </div>
+        </div>
+
+        <!-- CANVAS -->
+        <canvas id="canvas" width="800" height="450"></canvas>
+    </div>
+
+    <p id="status"></p>
+
+    <script src="shared.js"></script>
+    <script src="tools.js"></script>
+</body>
+
+</html>
